@@ -549,6 +549,36 @@
             margin-bottom: 1rem;
         }
 
+        /* Back nav */
+        .back-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background: rgba(10, 22, 40, 0.95);
+            padding: 14px 2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .back-nav a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: opacity 0.2s;
+        }
+
+        .back-nav a:hover {
+            opacity: 0.75;
+        }
+
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -607,6 +637,11 @@
     </style>
 </head>
 <body>
+    <!-- Back to Home -->
+    <nav class="back-nav">
+        <a href="index.html">&#8592; Back to Home</a>
+    </nav>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
