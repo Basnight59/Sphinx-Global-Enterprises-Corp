@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasaung Anderson Case Study | SPHINX Global</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --midnight: #0a1628;
+            --deep-navy: #1a2847;
+            --gold: #d4af37;
+            --amber: #ffb347;
+            --cream: #f8f6f0;
+            --silver: #c0c0c0;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--cream);
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--midnight) 0%, var(--deep-navy) 100%);
+            color: white;
+            padding: 8rem 2rem 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(212, 175, 55, 0.03) 10px, rgba(212, 175, 55, 0.03) 20px);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--gold);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.6s ease-out 0.2s backwards;
+        }
+
+        .hero-highlight {
+            color: var(--gold);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            font-weight: 300;
+            max-width: 800px;
+            line-height: 1.5;
+            opacity: 0.9;
+            animation: fadeInUp 0.6s ease-out 0.4s backwards;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: white;
+            padding: 3rem 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .stat {
+            text-align: center;
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .stat:nth-child(1) { animation-delay: 0.5s; }
+        .stat:nth-child(2) { animation-delay: 0.6s; }
+        .stat:nth-child(3) { animation-delay: 0.7s; }
+        .stat:nth-child(4) { animation-delay: 0.8s; }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--midnight);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+        }
+
+        /* GOGO Framework */
+        .gogo-framework {
+            background: var(--midnight);
+            color: white;
+            border-radius: 20px;
+            padding: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gogo-framework::before {
+            content: 'GOGO';
+            position: absolute;
+            font-size: 20rem;
+            font-weight: 900;
+            opacity: 0.03;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .gogo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .gogo-stage {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .gogo-stage:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+        }
+
+        .gogo-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gold);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .gogo-stage h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .gogo-stage p {
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 4rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--gold) 0%, var(--amber) 100%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            animation: fadeInLeft 0.6s ease-out backwards;
+        }
+
+        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+
+        .timeline-marker {
+            position: absolute;
+            left: -4.5rem;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background: var(--gold);
+            border-radius: 50%;
+            border: 4px solid var(--cream);
+            box-shadow: 0 0 0 4px var(--gold);
+        }
+
+        .timeline-date {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--midnight);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .timeline-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .timeline-list li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        /* Transformation Cards */
+        .transformation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .transform-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .transform-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .transform-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--gold), var(--amber));
+        }
+
+        .transform-card.before::before {
+            background: linear-gradient(90deg, #e74c3c, #c0392b);
+        }
+
+        .transform-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--midnight);
+        }
+
+        .transform-list {
+            list-style: none;
+        }
+
+        .transform-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+        }
+
+        .transform-list li:last-child {
+            border-bottom: none;
+        }
+
+        .transform-icon {
+            font-size: 1.3rem;
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background: var(--deep-navy);
+            color: white;
+            padding: 6rem 2rem;
+            position: relative;
+        }
+
+        .quote-section::before {
+            content: '"';
+            position: absolute;
+            font-size: 30rem;
+            font-family: 'Playfair Display', serif;
+            opacity: 0.05;
+            top: -5rem;
+            left: 2rem;
+            line-height: 1;
+        }
+
+        .quote-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .quote-text {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            font-weight: 300;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .quote-author {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--gold);
+        }
+
+        .quote-title {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+
+        /* Results Section */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .result-card {
+            background: linear-gradient(135deg, var(--midnight), var(--deep-navy));
+            color: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .result-card:hover {
+            transform: scale(1.05);
+        }
+
+        .result-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.1), transparent);
+            pointer-events: none;
+        }
+
+        .result-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .result-label {
+            font-size: 1rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--gold), var(--amber));
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            color: var(--midnight);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            color: var(--midnight);
+            opacity: 0.8;
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--midnight);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 30px rgba(10, 22, 40, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(10, 22, 40, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--midnight);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.7;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 5rem 1.5rem 4rem;
+            }
+
+            .stats-container {
+                gap: 2rem;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+
+            .gogo-framework {
+                padding: 2rem;
+            }
+
+            .timeline {
+                padding-left: 2rem;
+            }
+
+            .timeline-marker {
+                left: -2.4rem;
+                width: 20px;
+                height: 20px;
+            }
+
+            .transformation-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">CASE STUDY</div>
+            <h1>
+                From Overwhelmed to Operational<br>
+                in <span class="hero-highlight">90 Days</span>
+            </h1>
+            <p class="hero-subtitle">
+                How SPHINX transformed knowledge into power for Kasaung Anderson—delivering economic sovereignty through AI-driven capability transfer
+            </p>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="stats-container">
+            <div class="stat">
+                <span class="stat-number">90</span>
+                <span class="stat-label">Days to Operational</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">2</span>
+                <span class="stat-label">Vehicle Fleet</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">4x</span>
+                <span class="stat-label">Faster Than Industry</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">176</span>
+                <span class="stat-label">Pages Delivered</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="container">
+        <div class="section-header">
+            <div class="section-label">The Challenge</div>
+            <h2>Analysis Paralysis</h2>
+            <p class="section-description">
+                Kasaung Anderson had a dream: start a trucking business and build generational wealth. But he was stuck—overwhelmed by the barriers that exclude most aspiring entrepreneurs from accessing expert guidance.
+            </p>
+        </div>
+
+        <div class="transformation-grid">
+            <div class="transform-card before">
+                <h3>Before SPHINX</h3>
+                <ul class="transform-list">
+                    <li>
+                        <span class="transform-icon">❌</span>
+                        <span>Overwhelmed by business structure complexity</span>
+                    </li>
+                    <li>
+                        <span class="transform-icon">❌</span>
+                        <span>Couldn't afford $20,000+ traditional consultants</span>
+                    </li>
+                    <li>
+                        <span class="transform-icon">❌</span>
+                        <span>Stuck researching DOT compliance and insurance</span>
+                    </li>
+                    <li>
+                        <span class="transform-icon">❌</span>
+                        <span>Generic AI tools produced unusable templates</span>
+                    </li>
+                    <li>
+                        <span class="transform-icon">❌</span>
+                        <span>No clear path from idea to execution</span>
+                    </li>
+                    <li>
+                        <span class="transform-icon">❌</span>
+                        <span>Analysis paralysis—knowledge existed but inaccessible</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="transform-card after">
+                <h3>After SPHINX</h3>
+                <ul class="transform-list">
+                    <li>
+                        <span class="transform-icon">✅</span>
+                        <span>Two-vehicle fleet operational (2023 RAM ProMaster)</span>
+                    </li>
+                    <li>
+                        <span class="transform-icon">✅</span>
+                        <span>Federal USDOT registration (4580841)</span>
+                    </li>
+                    <li>
+                        <span class="transform-icon">✅</span>
+                        <span>Profitable niche identified (waste hauling—$1.5T industry)</span>
+                    </li>
+                    <li>
+                        <span class="transform-icon">✅</span>
+                        <span>Complete 6-month scaling roadmap</span>
+                    </li>
+                    <li>
+                        <span class="transform-icon">✅</span>
+                        <span>Driver hiring and training strategy</span>
+                    </li>
+                    <li>
+                        <span class="transform-icon">✅</span>
+                        <span>Economic sovereignty—owns the capability</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- GOGO Framework Section -->
+    <section class="container">
+        <div class="section-header">
+            <div class="section-label">The Methodology</div>
+            <h2>Gold In, Gold Out</h2>
+            <p class="section-description">
+                Traditional AI tools suffer from GIGO: Garbage In, Garbage Out. SPHINX pioneered GOGO: rich client context meets expert multi-LLM orchestration to produce actionable intelligence.
+            </p>
+        </div>
+
+        <div class="gogo-framework">
+            <div class="gogo-grid">
+                <div class="gogo-stage">
+                    <div class="gogo-icon">🎤</div>
+                    <h3>Gold In</h3>
+                    <p>Kasaung provided rich context through authentic voice messages—constraints, goals, timeline, geographic realities. Not limiting forms. Not generic queries. Real human context that captured his vision and limitations.</p>
+                </div>
+
+                <div class="gogo-stage">
+                    <div class="gogo-icon">⚙️</div>
+                    <h3>Expert Orchestration</h3>
+                    <p>SPHINX directed three AI platforms strategically: Claude (regulatory validation), Gemini (strategic frameworks), ChatGPT (financial modeling). Cross-validated every claim. Web-searched current 2026 data. Human expert synthesis ensured coherence.</p>
+                </div>
+
+                <div class="gogo-stage">
+                    <div class="gogo-icon">🎯</div>
+                    <h3>Gold Out</h3>
+                    <p>176 pages of comprehensive, current, actionable intelligence. Business structure strategy. Week-by-week launch checklist. Bank-ready business plan. Credit building roadmap. Driver training curriculum. Not templates—strategic guidance.</p>
+                </div>
+
+                <div class="gogo-stage">
+                    <div class="gogo-icon">🚀</div>
+                    <h3>Execution</h3>
+                    <p>Kasaung executed systematically. 90 days from roadmap delivery to operational fleet. Not dependency—capability transfer. He owns the knowledge. He owns the business. He owns his economic future.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="container">
+        <div class="section-header">
+            <div class="section-label">The Journey</div>
+            <h2>90-Day Transformation</h2>
+            <p class="section-description">
+                From voice messages to federal DOT registration—a systematic execution of the SPHINX roadmap.
+            </p>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-date">Day 0 | Mid-November 2025</div>
+                <div class="timeline-title">SPHINX Delivery</div>
+                <div class="timeline-content">
+                    <p>Kasaung receives comprehensive 176-page intelligence package:</p>
+                    <ul class="timeline-list">
+                        <li>Business Structure Decision Memo (Wyoming LLC strategy)</li>
+                        <li>Master Launch Checklist (week-by-week roadmap)</li>
+                        <li>Bank-Ready Business Plan (3-year projections)</li>
+                        <li>24-Month Credit Building Roadmap</li>
+                        <li>6-Month Driver Training Plan</li>
+                        <li>Executive Summary Package</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-date">Days 1-60 | Nov-Dec 2025</div>
+                <div class="timeline-title">Foundation Building</div>
+                <div class="timeline-content">
+                    <p>Systematic execution of formation and compliance roadmap:</p>
+                    <ul class="timeline-list">
+                        <li>Business entity formation (LLC/Corp structure)</li>
+                        <li>EIN obtained from IRS</li>
+                        <li>USDOT registration application filed with FMCSA</li>
+                        <li>Insurance carrier identified and quotes obtained</li>
+                        <li>Credit building process initiated</li>
+                        <li>Waste hauling niche identified ($1.5T industry)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-date">Day 60 | January 2026</div>
+                <div class="timeline-title">Fleet Acquisition Begins</div>
+                <div class="timeline-content">
+                    <p>First major milestone achieved:</p>
+                    <ul class="timeline-list">
+                        <li>First cargo van purchased (2023 RAM ProMaster)</li>
+                        <li>USDOT Number 4580841 obtained (federal registration)</li>
+                        <li>Insurance activated</li>
+                        <li>Second vehicle opportunity identified</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-date">Day 90 | Mid-February 2026</div>
+                <div class="timeline-title">Operational & Ready to Scale</div>
+                <div class="timeline-content">
+                    <p>Complete transformation achieved:</p>
+                    <ul class="timeline-list">
+                        <li>Second cargo van purchased (2-vehicle fleet operational)</li>
+                        <li>All federal and state registrations complete</li>
+                        <li>6-month expansion plan created (box trucks → semi trucks)</li>
+                        <li>Driver hiring strategy from training plan ready to execute</li>
+                        <li>Economic sovereignty achieved—capability fully transferred</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="quote-content">
+            <p class="quote-text">
+                Peace King ✌️ I just want to thank you for ya help and motivation (fire under my ass). Much love. This is amazing. You are The Real Deal.
+            </p>
+            <div class="quote-author">Kasaung Anderson</div>
+            <div class="quote-title">Founder | Anderson Waste Transport</div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="container">
+        <div class="section-header">
+            <div class="section-label">The Impact</div>
+            <h2>Measurable Results</h2>
+            <p class="section-description">
+                Beyond the timeline—the quantifiable transformation from overwhelmed to economically sovereign.
+            </p>
+        </div>
+
+        <div class="results-grid">
+            <div class="result-card">
+                <span class="result-value">4x</span>
+                <span class="result-label">Faster Than Industry Standard (12-18 months → 90 days)</span>
+            </div>
+
+            <div class="result-card">
+                <span class="result-value">$20k+</span>
+                <span class="result-label">Saved vs Traditional Consulting Fees</span>
+            </div>
+
+            <div class="result-card">
+                <span class="result-value">100%</span>
+                <span class="result-label">Roadmap Execution Rate</span>
+            </div>
+
+            <div class="result-card">
+                <span class="result-value">$1.5T</span>
+                <span class="result-label">Industry Identified (Waste Hauling)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="container" style="background: white; padding: 5rem 2rem; border-radius: 20px; margin: 3rem auto;">
+        <div class="section-header">
+            <div class="section-label">The Mission</div>
+            <h2>Knowledge Without Deployment Changes Nothing</h2>
+            <p class="section-description" style="max-width: 100%;">
+                The Kasaung Anderson case serves as the ultimate proof of SPHINX Global's foundational mission: transform knowledge into power, and power into progress. We don't create dependency—we transfer capability. We don't just deliver documents—we build economic sovereignty.
+            </p>
+        </div>
+
+        <div style="margin-top: 3rem; padding: 2rem; background: rgba(212, 175, 55, 0.05); border-left: 4px solid var(--gold); border-radius: 8px;">
+            <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-secondary); margin: 0;">
+                Traditional consulting creates ongoing dependency—pay forever, never truly own the knowledge. SPHINX operates differently: we transfer complete capability in 72 hours, and you execute independently. Kasaung doesn't need us anymore. <strong style="color: var(--midnight);">That's the point.</strong> He owns the roadmap. He owns the knowledge. He owns his economic future. This is capability transfer. This is economic sovereignty. This is AI for the good of humanity—one entrepreneur at a time.
+            </p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Your 90-Day Transformation Starts Here</h2>
+            <p>
+                Stop being overwhelmed. Start building economic sovereignty. Let SPHINX transform your vision into actionable intelligence.
+            </p>
+            <a href="#contact" class="cta-button">Begin Your Journey</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">SPHINX GLOBAL</div>
+        <p>Transforming Knowledge Into Power. Power Into Progress.</p>
+        <p style="margin-top: 2rem; font-size: 0.9rem;">&copy; 2026 SPHINX Global Enterprises Corp. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for CTA button
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            // Add your contact form navigation logic here
+            alert('Contact form coming soon! For now, email: contact@sphinxglobal.com');
+        });
+
+        // Add scroll-triggered animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all major sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
