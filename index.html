@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SPHINX Global Enterprises Corp. | Innovation · Ethics · Economic Sovereignty</title>
-  <meta name="description" content="SPHINX Global Enterprises Corp. is a Delaware-based holding company unifying innovation, ethics, and economic sovereignty through strategic subsidiaries in technology, education, AI governance, and community empowerment." />
+  <meta name="description" content="SPHINX Global Enterprises Corp. is a Delaware-based holding company unifying innovation, ethics, and economic sovereignty through strategic subsidiaries in technology, education, and digital transformation." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Rajdhani:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <style>
@@ -72,7 +72,6 @@
       background-size: 80px 80px;
       mask-image: radial-gradient(ellipse 75% 75% at 55% 45%, black 0%, transparent 100%);
     }
-    /* Decorative corner mark */
     .hero-corner {
       position: absolute; top: 100px; right: 60px;
       width: 200px; height: 200px;
@@ -122,7 +121,6 @@
     }
     .btn-secondary:hover { border-color: var(--gold); background: rgba(201,168,76,0.05); }
 
-    /* Stat bar */
     .stat-bar {
       position: relative; z-index: 1;
       border-top: 1px solid rgba(201,168,76,0.15); padding-top: 44px; margin-top: 72px;
@@ -131,7 +129,6 @@
     .stat-number { font-family: var(--font-display); font-size: 48px; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 8px; }
     .stat-label { font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
 
-    /* ── SHARED SECTION STYLES ── */
     section { position: relative; z-index: 1; padding: 100px 60px; }
     .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.18), transparent); margin: 0 60px; }
     .sec-eyebrow {
@@ -147,7 +144,6 @@
     .sec-title em { font-style: italic; color: var(--gold); }
     .sec-body { font-size: 15px; line-height: 1.85; color: var(--text); max-width: 640px; }
 
-    /* ── ABOUT ── */
     #about { background: var(--dark); }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
     .about-statement {
@@ -161,7 +157,6 @@
     .pillar-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
     .pillar-text { font-size: 14px; line-height: 1.75; color: var(--text); }
 
-    /* Delaware badge */
     .delaware-badge {
       display: inline-flex; align-items: center; gap: 10px;
       font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em;
@@ -171,7 +166,6 @@
     }
     .delaware-badge::before { content: '◆'; color: var(--gold); font-size: 8px; }
 
-    /* ── VENTURES ── */
     #ventures { background: var(--black); }
     .ventures-header { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; margin-bottom: 64px; align-items: start; }
     .ventures-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -216,7 +210,6 @@
     .badge-active { color: var(--gold); border-color: rgba(201,168,76,0.3); }
     .badge-dev { color: var(--muted); border-color: rgba(106,138,154,0.3); }
 
-    /* ── FRAMEWORKS ── */
     #frameworks { background: var(--dark); }
     .fw-intro { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; margin-bottom: 60px; align-items: start; }
     .fw-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
@@ -229,7 +222,6 @@
     .fw-full { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.07em; color: var(--gold); text-transform: uppercase; margin-bottom: 16px; }
     .fw-desc { font-size: 13px; line-height: 1.75; color: var(--muted); }
 
-    /* ── MISSION STATEMENT ── */
     #impact { background: var(--black); }
     .impact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     .impact-quote {
@@ -244,17 +236,16 @@
     .impact-title { font-size: 15px; font-weight: 600; color: var(--text-bright); letter-spacing: 0.04em; margin-bottom: 4px; }
     .impact-text { font-size: 13px; line-height: 1.7; color: var(--muted); }
 
-    /* ── CONTACT ── */
     #contact { background: var(--dark); }
     .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
     .form { display: flex; flex-direction: column; gap: 14px; }
     .form-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 6px; display: block; }
-    .form-input, .form-select, .form-textarea { background: var(--dark-2); border: 1px solid rgba(201,168,76,0.15); color: var(--text); font-family: var(--font-ui); font-size: 15px; padding: 13px 16px; outline: none; transition: border-color 0.3s; width: 100%; -webkit-appearance: none; }
-    .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--gold-dim); }
+    .form-input, .form-select, .form-textarea { background: var(--dark-2); border: 1px solid rgba(201,168,76,0.15); color: var(--text); font-family: var(--font-ui); font-size: 15px; padding: 13px 16px; width: 100%; }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { outline: none; border-color: var(--gold-dim); }
     .form-input::placeholder, .form-textarea::placeholder { color: rgba(212,201,184,0.35); }
     .form-textarea { resize: vertical; min-height: 120px; }
     .form-select option { background: var(--dark-2); }
-    .form-submit { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--black); background: var(--gold); border: none; padding: 16px 36px; cursor: pointer; font-weight: 700; transition: all 0.3s; align-self: flex-start; margin-top: 6px; }
+    .form-submit { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--black); background: var(--gold); border: none; padding: 16px 36px; cursor: pointer; transition: all 0.3s; }
     .form-submit:hover { background: var(--gold-light); transform: translateY(-2px); }
     .contact-info { padding-top: 8px; }
     .contact-detail { margin-bottom: 28px; }
@@ -265,7 +256,6 @@
     .ip-box-title { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
     .ip-box-text { font-size: 12px; line-height: 1.7; color: var(--muted); }
 
-    /* ── FOOTER ── */
     footer { background: var(--black); border-top: 1px solid rgba(201,168,76,0.12); padding: 60px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 50px; }
     .footer-logo { font-family: var(--font-display); font-size: 24px; font-weight: 600; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px; }
     .footer-tagline { font-size: 13px; line-height: 1.75; color: var(--muted); max-width: 280px; margin-bottom: 20px; }
@@ -275,14 +265,12 @@
     .footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.3s; }
     .footer-links a:hover { color: var(--gold); }
 
-    /* ── ANIMATIONS ── */
     @keyframes fadeUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: translateY(0); } }
     .anim { animation: fadeUp 0.8s ease forwards; }
     .d1 { animation-delay: 0.1s; opacity: 0; } .d2 { animation-delay: 0.25s; opacity: 0; }
     .d3 { animation-delay: 0.4s; opacity: 0; } .d4 { animation-delay: 0.55s; opacity: 0; }
     .d5 { animation-delay: 0.7s; opacity: 0; }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       nav { padding: 20px 28px; } .nav-links { display: none; }
       section { padding: 72px 28px; } footer { padding: 48px 28px; grid-template-columns: 1fr 1fr; }
@@ -292,7 +280,12 @@
       .stat-bar { grid-template-columns: repeat(2, 1fr); gap: 28px; }
       .hero-corner { display: none; }
     }
-    @media (max-width: 640px) { footer { grid-template-columns: 1fr; } .hero-actions { flex-direction: column; } .hero-triad { flex-direction: column; gap: 12px; } .hero-triad-item { border-right: none; padding-right: 0; margin-right: 0; border-bottom: 1px solid rgba(201,168,76,0.2); padding-bottom: 12px; } }
+    @media (max-width: 640px) {
+      footer { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; }
+      .hero-triad { flex-direction: column; gap: 12px; }
+      .hero-triad-item { border-right: none; padding-right: 0; margin-right: 0; }
+    }
   </style>
 </head>
 <body>
@@ -304,6 +297,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#ventures">Ventures</a></li>
     <li><a href="#frameworks">Frameworks</a></li>
+    <li><a href="/Testimonials">Testimonials</a></li>
     <li><a href="#impact">Impact</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -335,6 +329,7 @@
     </p>
     <div class="hero-actions anim d5">
       <a href="#ventures" class="btn-primary">Explore Our Ventures</a>
+      <a href="/Testimonials" class="btn-secondary">View Testimonials</a>
       <a href="#contact" class="btn-secondary">Contact Us</a>
     </div>
   </div>
@@ -373,19 +368,19 @@
     <div class="about-pillars">
       <div class="pillar">
         <div class="pillar-label">Our Method — Truth</div>
-        <div class="pillar-text">Every decision, analysis, and output across the SPHINX ecosystem is anchored to verifiable, traceable truth. We don't build on assumptions — we build on documented evidence with SHA-256 cryptographic audit trails that cannot be revised after the fact.</div>
+        <div class="pillar-text">Every decision, analysis, and output across the SPHINX ecosystem is anchored to verifiable, traceable truth. We don't build on assumptions — we build on documented evidence, tested frameworks, and auditable processes.</div>
       </div>
       <div class="pillar">
         <div class="pillar-label">Our Method — Transparency</div>
-        <div class="pillar-text">Governance decisions are made visible. How we analyze, what we concluded, where we disagreed — every step is documented and attributable. Our clients and partners always know exactly what they are receiving and why.</div>
+        <div class="pillar-text">Governance decisions are made visible. How we analyze, what we concluded, where we disagreed — every step is documented and attributable. Our clients and partners always know how the work was produced.</div>
       </div>
       <div class="pillar">
         <div class="pillar-label">Our Method — Legacy</div>
-        <div class="pillar-text">This work is designed to outlast its creator. Generational transmission, institutional architecture, IP protection, and succession planning are built into every subsidiary from inception — because sustainability is not an afterthought. It is the product.</div>
+        <div class="pillar-text">This work is designed to outlast its creator. Generational transmission, institutional architecture, IP protection, and succession planning are built into every subsidiary and framework from the beginning.</div>
       </div>
       <div class="pillar">
         <div class="pillar-label">Our Foundation — Economic Sovereignty</div>
-        <div class="pillar-text">True empowerment requires ownership — of intellectual property, of decision-making frameworks, of the tools being used. Every SPHINX Global venture is built to create capability, not dependency. The goal is always that communities and individuals leave more powerful than when they arrived.</div>
+        <div class="pillar-text">True empowerment requires ownership — of intellectual property, of decision-making frameworks, of the tools being used. Every SPHINX Global venture is built to create durable control, not temporary access.</div>
       </div>
     </div>
   </div>
@@ -495,37 +490,37 @@
       <div class="fw-id">FRAMEWORK — 001</div>
       <div class="fw-name">SPHINX<br>Method™</div>
       <div class="fw-full">Strategic Parallel Human Intelligence Nexus Exchange</div>
-      <div class="fw-desc">Multi-LLM orchestration routing complex analysis across five AI models simultaneously. Neutralizes single-model bias through variance detection, fail-closed governance, and mandatory human final arbitration.</div>
+      <div class="fw-desc">Multi-LLM orchestration routing complex analysis across five AI models simultaneously. Neutralizes single-model bias through variance detection, fail-closed governance, and documented human oversight.</div>
     </div>
     <div class="fw-card">
       <div class="fw-id">FRAMEWORK — 002</div>
       <div class="fw-name">TTL<br>Protocol™</div>
       <div class="fw-full">Truth, Transparency, Legacy</div>
-      <div class="fw-desc">The ethical triad governing all SPHINX ecosystem decisions. Truth-anchored outputs, transparent governance records, and legacy-oriented architecture ensure every decision serves long-term institutional integrity and generational transmission.</div>
+      <div class="fw-desc">The ethical triad governing all SPHINX ecosystem decisions. Truth-anchored outputs, transparent governance records, and legacy-oriented architecture ensure every decision serves durable human benefit.</div>
     </div>
     <div class="fw-card">
       <div class="fw-id">FRAMEWORK — 003</div>
       <div class="fw-name">PTCS<br>Framework™</div>
       <div class="fw-full">Post-Colonization Trauma Syndrome</div>
-      <div class="fw-desc">Clinical and neuroeducational framework diagnosing intergenerational harm from epistemic erasure. Provides a diagnostic architecture for institutional recognition, therapeutic intervention, and reparative policy — deployed through L.I.F.E. Corporation.</div>
+      <div class="fw-desc">Clinical and neuroeducational framework diagnosing intergenerational harm from epistemic erasure. Provides a diagnostic architecture for institutional recognition, therapeutic response, and policy intervention.</div>
     </div>
     <div class="fw-card">
       <div class="fw-id">FRAMEWORK — 004</div>
       <div class="fw-name">HOB<br>Block™</div>
       <div class="fw-full">Handoff Oversight Block</div>
-      <div class="fw-desc">Cryptographically anchored governance artifacts creating an immutable chain of custody for AI decisions. SHA-256 anchored audit trail enabling portability, full attribution tracking, and forensic-grade documentation across multi-model flows.</div>
+      <div class="fw-desc">Cryptographically anchored governance artifacts creating an immutable chain of custody for AI decisions. SHA-256 anchored audit trails enable portability, attribution, and accountable handoff.</div>
     </div>
     <div class="fw-card">
       <div class="fw-id">FRAMEWORK — 005</div>
       <div class="fw-name">KAT<br>Score™</div>
       <div class="fw-full">Knowledge, Action, Taqwa Evaluation</div>
-      <div class="fw-desc">Multi-framework ethical evaluation scoring processing governance queries through Islamic, Jewish, Christian, and Secular Humanist frameworks simultaneously. Maqasid al-Shariah preservation scoring with fail-closed gating on sacred violations.</div>
+      <div class="fw-desc">Multi-framework ethical evaluation scoring that processes governance queries through Islamic, Jewish, Christian, and Secular Humanist perspectives to surface principled decision paths.</div>
     </div>
     <div class="fw-card">
       <div class="fw-id">FRAMEWORK — 006</div>
       <div class="fw-name">Digital<br>Apartheid™</div>
       <div class="fw-full">Epistemic Exclusion by Design</div>
-      <div class="fw-desc">Analytical and research framework documenting structural exclusion of marginalized communities from LLM training, AI governance, and educational AI deployment — tracing the Berlin Conference governance template into the digital age.</div>
+      <div class="fw-desc">Analytical and research framework documenting structural exclusion of marginalized communities from LLM training, AI governance, and educational AI deployment across historical and modern systems.</div>
     </div>
   </div>
 </section>
@@ -577,14 +572,14 @@
         <div class="impact-icon">🏘️</div>
         <div>
           <div class="impact-title">Community Delivers the Change</div>
-          <div class="impact-text">L.I.F.E. Corporation translates every framework and tool into ground-level community transformation — financial literacy, family empowerment, and collective action at the neighborhood scale.</div>
+          <div class="impact-text">L.I.F.E. Corporation translates every framework and tool into ground-level community transformation — financial literacy, family empowerment, and collective action.</div>
         </div>
       </div>
       <div class="impact-node">
         <div class="impact-icon">🔐</div>
         <div>
           <div class="impact-title">IP Protection Ensures the Legacy</div>
-          <div class="impact-text">Active copyright, trademark, and provisional patent processes protect every framework from institutional extraction — ensuring the work remains in the hands of the people who built it.</div>
+          <div class="impact-text">Active copyright, trademark, and provisional patent processes protect every framework from institutional extraction — ensuring the work remains in the hands of those who built it.</div>
         </div>
       </div>
     </div>
