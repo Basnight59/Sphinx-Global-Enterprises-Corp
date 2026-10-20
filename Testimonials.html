@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kasaung Anderson Case Study | SPHINX Global</title>
+    <meta name="description" content="How SPHINX Global helped Kasaung Anderson go from idea to a two-vehicle, USDOT-registered waste hauling business in 90 days.">
+    <link rel="canonical" href="https://sphinxglobalenterprisescorp.com/Testimonials">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a1628">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="SPHINX Global Enterprises Corp.">
+    <meta property="og:title" content="From Overwhelmed to Operational in 90 Days | SPHINX Global">
+    <meta property="og:description" content="Case study: Kasaung Anderson's 90-day path to a two-vehicle, USDOT-registered waste hauling business.">
+    <meta property="og:url" content="https://sphinxglobalenterprisescorp.com/Testimonials">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="From Overwhelmed to Operational in 90 Days">
+    <meta name="twitter:description" content="Case study: Kasaung Anderson's 90-day path to a two-vehicle, USDOT-registered waste hauling business.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -30,6 +45,18 @@
             background: var(--cream);
             overflow-x: hidden;
         }
+
+        /* Top bar */
+        .topbar {
+            position: absolute; top: 0; left: 0; right: 0; z-index: 10;
+            display: flex; align-items: center; justify-content: space-between;
+            max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem;
+        }
+        .topbar a { color: white; text-decoration: none; }
+        .topbar-logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.25rem; color: var(--gold) !important; letter-spacing: 1px; white-space: nowrap; }
+        .topbar-links { display: flex; gap: 1.5rem; font-size: 0.9rem; font-weight: 500; }
+        .topbar-links a { opacity: 0.85; }
+        .topbar-links a:hover { opacity: 1; color: var(--gold); }
 
         /* Hero Section */
         .hero {
@@ -107,7 +134,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
             gap: 3rem;
         }
 
@@ -201,7 +228,7 @@
 
         .gogo-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
             gap: 3rem;
             position: relative;
             z-index: 1;
@@ -325,7 +352,7 @@
         /* Transformation Cards */
         .transformation-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
@@ -438,7 +465,7 @@
         /* Results Section */
         .results-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
@@ -603,12 +630,27 @@
             .transformation-grid {
                 grid-template-columns: 1fr;
             }
+
+            .gogo-framework::before { font-size: 8rem; }
+            .transform-card, .result-card { padding: 1.75rem; }
+            .topbar { padding: 1.25rem 1.5rem; }
+            .topbar-logo { font-size: 1.05rem; }
+            .hero { padding-top: 6.5rem; }
+            .topbar-links { gap: 1rem; font-size: 0.85rem; }
         }
     </style>
 </head>
 <body>
     <!-- Hero Section -->
     <section class="hero">
+        <nav class="topbar" aria-label="Main">
+            <a href="/" class="topbar-logo">SPHINX GLOBAL</a>
+            <div class="topbar-links">
+                <a href="/">Home</a>
+                <a href="/#ventures">Ventures</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </nav>
         <div class="hero-content">
             <div class="hero-badge">CASE STUDY</div>
             <h1>
@@ -901,25 +943,18 @@
             <p>
                 Stop being overwhelmed. Start building economic sovereignty. Let SPHINX transform your vision into actionable intelligence.
             </p>
-            <a href="#contact" class="cta-button">Begin Your Journey</a>
+            <a href="/#contact" class="cta-button">Begin Your Journey</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-logo">SPHINX GLOBAL</div>
+        <div class="footer-logo"><a href="/" style="color: inherit; text-decoration: none;">SPHINX GLOBAL</a></div>
         <p>Transforming Knowledge Into Power. Power Into Progress.</p>
-        <p style="margin-top: 2rem; font-size: 0.9rem;">&copy; 2026 SPHINX Global Enterprises Corp. All rights reserved.</p>
+        <p style="margin-top: 2rem; font-size: 0.9rem;">&copy; 2025–2026 SPHINX Global Enterprises Corp. All rights reserved.</p>
     </footer>
 
     <script>
-        // Smooth scroll for CTA button
-        document.querySelector('.cta-button').addEventListener('click', function(e) {
-            e.preventDefault();
-            // Add your contact form navigation logic here
-            alert('Contact form coming soon! For now, email: contact@sphinxglobal.com');
-        });
-
         // Add scroll-triggered animations
         const observerOptions = {
             threshold: 0.1,
@@ -936,7 +971,7 @@
         }, observerOptions);
 
         // Observe all major sections
-        document.querySelectorAll('section').forEach(section => {
+        document.querySelectorAll('section:not(.hero):not(.stats-bar)').forEach(section => {
             section.style.opacity = '0';
             section.style.transform = 'translateY(20px)';
             section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
