@@ -299,6 +299,7 @@
     .form-honey { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
     .form-status { display: none; padding: 16px 18px; border: 1px solid rgba(76,175,80,0.4); background: rgba(76,175,80,0.08); color: var(--text-bright); font-size: 15px; margin-bottom: 20px; }
     .form-status.show { display: block; }
+    .form-hint { font-size: 13px; line-height: 1.6; color: var(--muted); margin-top: -2px; }
     .contact-info { padding-top: 8px; }
     .contact-detail { margin-bottom: 28px; }
     .contact-detail-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 6px; }
@@ -709,6 +710,7 @@
           <textarea class="form-textarea" id="message" name="message" placeholder="Tell us about your organization and how we can work together..." required></textarea>
         </div>
         <button type="submit" class="form-submit">Send Message</button>
+        <p class="form-hint">After you click Send, a quick "I'm not a robot" check will appear. Please complete it so your message reaches us.</p>
       </form>
     </div>
     <div class="contact-info">
