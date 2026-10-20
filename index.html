@@ -32,7 +32,7 @@
     "address": { "@type": "PostalAddress", "addressRegion": "DE", "addressCountry": "US" },
     "subOrganization": [
       { "@type": "Organization", "name": "Sphinx Digital Marketing Agency LLC", "url": "https://www.sphinxdigitalmarketingagency.com" },
-      { "@type": "Organization", "name": "Sphinx Analysis", "url": "https://sphinxanalysis.com" },
+      { "@type": "Organization", "name": "Sphinx Analysis", "url": "https://www.sphinxanalysis.com/" },
       { "@type": "Organization", "name": "L.I.F.E. Corporation" },
       { "@type": "Organization", "name": "Sphinx AI Academy for Recovery" }
     ]
@@ -72,7 +72,7 @@
       color: var(--gold); letter-spacing: 0.12em; text-decoration: none; text-transform: uppercase;
     }
     .nav-logo span { color: var(--text-bright); font-weight: 300; }
-    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links { display: flex; gap: clamp(18px, 2.2vw, 36px); list-style: none; }
     .nav-links a {
       font-family: var(--font-ui); font-size: 13px; font-weight: 500;
       letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
@@ -86,6 +86,13 @@
     }
     .nav-cta:hover { background: var(--gold); color: var(--black); }
     .nav-right { display: flex; align-items: center; gap: 16px; order: 3; }
+    .nav-sister {
+      font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--muted); border: 1px solid rgba(201,168,76,0.3);
+      padding: 10px 16px; text-decoration: none; transition: all 0.3s; white-space: nowrap;
+    }
+    .nav-sister:hover { border-color: var(--gold); color: var(--gold); }
+    .nav-logo, .nav-cta, .nav-links a { white-space: nowrap; }
     .nav-links { order: 2; }
     .nav-toggle {
       display: none; background: none; border: 1px solid var(--gold-dim);
@@ -342,12 +349,39 @@
       .stat-bar { grid-template-columns: repeat(2, 1fr); gap: 28px; }
       .hero-corner { display: none; }
     }
+    @media (max-width: 1400px) and (min-width: 1025px) {
+      /* Laptop widths: "Contact" is already in the links, so drop the duplicate button */
+      .nav-cta { display: none; }
+    }
+    @media (max-width: 1180px) and (min-width: 1025px) {
+      nav { padding: 22px 32px; }
+      .nav-links a { letter-spacing: 0.1em; }
+    }
+    @media (max-width: 640px) {
+      .ns-full { display: none; }
+      .nav-right { gap: 10px; }
+    }
+    @media (max-width: 420px) {
+      .nav-logo { font-size: 19px; letter-spacing: 0.08em; }
+      .nav-right { gap: 8px; }
+    }
+    @media (max-width: 340px) {
+      nav { padding: 14px 16px; }
+      .nav-logo { font-size: 17px; letter-spacing: 0.05em; }
+      .nav-sister { padding: 8px 7px; letter-spacing: 0.06em; }
+      .nav-right { gap: 6px; }
+      .nav-toggle { width: 40px; height: 40px; }
+      .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { left: 10px; }
+      .nav-toggle span { top: 19px; }
+      .nav-toggle span::before, .nav-toggle span::after { left: 0; }
+    }
     @media (max-width: 640px) {
       footer { grid-template-columns: 1fr; }
       .hero-actions { flex-direction: column; }
       .hero-triad { flex-direction: column; gap: 12px; }
       .hero-triad-item { border-right: none; padding-right: 0; margin-right: 0; }
       .nav-cta { display: none; }
+      .nav-sister { padding: 9px 10px; font-size: 9px; }
       nav { padding: 16px 20px; }
       section { padding: 64px 20px; } #hero { padding: 100px 20px 60px; }
       .divider { margin: 0 20px; }
@@ -362,6 +396,7 @@
 <nav id="site-nav">
   <a href="#hero" class="nav-logo">SPHINX <span>Global</span></a>
   <div class="nav-right">
+    <a href="https://www.sphinxanalysis.com/" class="nav-sister"><span class="ns-full">Sphinx </span>Analysis ↗</a>
     <a href="#contact" class="nav-cta">Get In Touch</a>
     <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
   </div>
@@ -488,7 +523,7 @@
       <div class="venture-link">Visit Sphinx Digital</div>
     </a>
 
-    <a href="https://sphinxanalysis.com" class="venture-card" target="_blank" rel="noopener">
+    <a href="https://www.sphinxanalysis.com/" class="venture-card" target="_blank" rel="noopener">
       <span class="venture-badge badge-active">IN DEVELOPMENT</span>
       <div class="venture-domain">Research Arm · sphinxanalysis.com</div>
       <h3 class="venture-name">Sphinx<br>Analysis</h3>
@@ -726,7 +761,7 @@
       </div>
       <div class="contact-detail">
         <div class="contact-detail-label">Research Arm</div>
-        <div class="contact-detail-value"><a href="https://sphinxanalysis.com" target="_blank" rel="noopener">sphinxanalysis.com</a></div>
+        <div class="contact-detail-value"><a href="https://www.sphinxanalysis.com/" target="_blank" rel="noopener">sphinxanalysis.com</a></div>
       </div>
       <div class="ip-box">
         <div class="ip-box-title">Intellectual Property Notice</div>
@@ -768,7 +803,7 @@
     <div class="footer-col-title">Ventures</div>
     <ul class="footer-links">
       <li><a href="https://www.sphinxdigitalmarketingagency.com" target="_blank" rel="noopener">Sphinx Digital</a></li>
-      <li><a href="https://sphinxanalysis.com" target="_blank" rel="noopener">Sphinx Analysis</a></li>
+      <li><a href="https://www.sphinxanalysis.com/" target="_blank" rel="noopener">Sphinx Analysis</a></li>
       <li><a href="#ventures">L.I.F.E. Corporation</a></li>
       <li><a href="#ventures">Sphinx AI Academy</a></li>
     </ul>
