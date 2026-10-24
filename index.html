@@ -102,6 +102,8 @@
     .nav-sister:hover { border-color: var(--gold); color: var(--gold); }
     .nav-logo, .nav-cta, .nav-links a { white-space: nowrap; }
     .nav-links { order: 2; }
+    /* Room for the extra link only on wide screens; it always shows in the mobile menu */
+    @media (min-width: 1025px) and (max-width: 1599px) { .nav-policy { display: none; } }
     .nav-toggle {
       display: none; background: none; border: 1px solid var(--gold-dim);
       width: 44px; height: 44px; cursor: pointer; position: relative;
@@ -296,6 +298,14 @@
     .fw-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.4s; }
     .fw-card:hover { background: var(--dark-3); }
     .fw-card:hover::before { height: 100%; }
+    .policy-banner { display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-top: 2px; padding: 40px 36px; text-decoration: none; background: linear-gradient(135deg, rgba(201,168,76,0.12), rgba(201,168,76,0.03)); border: 1px solid rgba(201,168,76,0.35); transition: border-color 0.3s, background 0.3s; }
+    .policy-banner:hover { border-color: var(--gold); background: linear-gradient(135deg, rgba(201,168,76,0.18), rgba(201,168,76,0.05)); }
+    .policy-banner-eyebrow { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .policy-banner-title { font-family: var(--font-display); font-size: clamp(30px, 3.2vw, 44px); font-weight: 300; color: var(--text-bright); line-height: 1.1; margin-bottom: 12px; }
+    .policy-banner-title em { color: var(--gold); }
+    .policy-banner-text { font-size: 15px; line-height: 1.7; color: var(--text); max-width: 680px; }
+    .policy-banner-cta { flex-shrink: 0; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--black); background: var(--gold); padding: 16px 28px; white-space: nowrap; }
+    @media (max-width: 760px) { .policy-banner { flex-direction: column; align-items: flex-start; gap: 24px; padding: 30px 22px; } .policy-banner-cta { white-space: normal; } }
     .fw-id { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.22em; color: var(--gold-dim); margin-bottom: 14px; }
     .fw-name { font-family: var(--font-display); font-size: 26px; font-weight: 600; color: var(--text-bright); margin-bottom: 5px; line-height: 1.1; }
     .fw-full { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.07em; color: var(--gold); text-transform: uppercase; margin-bottom: 16px; }
@@ -428,6 +438,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#ventures">Ventures</a></li>
     <li><a href="#frameworks">Frameworks</a></li>
+    <li class="nav-policy"><a href="https://basnight59.github.io/Human-at-the-Gate/">AI Policy</a></li>
     <li><a href="/Testimonials">Testimonials</a></li>
     <li><a href="#impact">Impact</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -657,6 +668,14 @@
       <div class="fw-desc">Analytical and research framework documenting structural exclusion of marginalized communities from LLM training, AI governance, and educational AI deployment across historical and modern systems.</div>
     </div>
   </div>
+  <a class="policy-banner" href="https://basnight59.github.io/Human-at-the-Gate/">
+    <div>
+      <div class="policy-banner-eyebrow">Policy on Human-Centered AI · October 2026</div>
+      <div class="policy-banner-title">Human at the <em>Gate</em></div>
+      <p class="policy-banner-text">AI may research, compare, draft, challenge and recommend. Only a responsible human being may authorize, publish or act — and that human answers for the result.</p>
+    </div>
+    <span class="policy-banner-cta">Read the policy →</span>
+  </a>
 </section>
 
 <div class="divider"></div>
@@ -850,6 +869,7 @@
       <li><a href="#frameworks">PTCS Framework™</a></li>
       <li><a href="#frameworks">HOB Block™</a></li>
       <li><a href="#frameworks">KAT Score™</a></li>
+      <li><a href="https://basnight59.github.io/Human-at-the-Gate/">Human at the Gate (AI Policy)</a></li>
     </ul>
   </div>
 </footer>
